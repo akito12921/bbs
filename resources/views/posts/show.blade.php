@@ -21,7 +21,7 @@
 
     <div class="form-group">
         <label for="body">
-            本文
+            コメントを入力
         </label>
 
         <textarea
@@ -47,6 +47,7 @@
                 <h2 class="h5 mb-4">
                     コメント
                 </h2>
+                
                 @forelse($post->comments as $comment)
                     <div class="border-top p-4">
                         <time class="text-secondary">
@@ -59,10 +60,8 @@
                 @empty
                     <p>コメントはまだありません。</p>
                 @endforelse
+                
             </section>
-        </div>
-        <div class="d-flex justify-content-center mb-5">
-            {{ $comments->links() }}
         </div>
     </div>
 @endsection
